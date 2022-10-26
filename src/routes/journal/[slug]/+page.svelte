@@ -3,6 +3,7 @@
 	import { page } from '$app/stores';
 	import { browser, dev, prerendering } from '$app/environment';
 	import { onMount } from 'svelte';
+	import HeaderMetatags from 'src/components/HeaderMetatags.svelte';
 
 	let ref: any;
 

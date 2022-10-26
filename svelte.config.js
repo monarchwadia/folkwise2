@@ -13,8 +13,11 @@ const config = {
         })
     ],
     kit: {
-        adapter: adapter()
-    }
+        adapter: adapter(),
+				alias: {
+					'src': './src',
+				}
+    },
 };
 
 export default config;

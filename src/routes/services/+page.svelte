@@ -1,4 +1,5 @@
 <script lang="ts">
+	import HeaderMetatags from 'src/components/HeaderMetatags.svelte';
 	import Rating from './Rating.svelte';
 
 	const s = (label: string, years: number, rating: number) => ({ label, years, rating });
@@ -24,6 +25,8 @@
 </script>
 
 <div class="flex flex-col gap-8">
+	<HeaderMetatags title="Services" />
+
 	<h1 class="text-3xl font-bold">I'm a consulting software developer.</h1>
 
 	<p>

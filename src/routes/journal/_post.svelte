@@ -14,13 +14,15 @@
 		'Thoughts about software development, the tech industry, and the tech talent crunch.';
 </script>
 
-<div class="prose lg:prose-lg mb-8 border-b-2 border-base-content">
+<div class="flex flex-col gap-8 mb-8 border-b-2 border-base-content">
 	<HeaderMetatags {title} />
-	<h1 class="mb-2">{title}</h1>
+	<h1 class="mb-2 font-bold text-3xl">{title}</h1>
 	<a href={'/journal/' + slug} class="link">Link</a>
 	<p class="mt-0 mb-0">Published: {new Date(date).toLocaleDateString()}</p>
 
-	<slot />
+	<div class="prose lg:prose-lg">
+		<slot />
+	</div>
 
 	<div class="mb-8" />
 </div>
