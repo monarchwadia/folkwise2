@@ -24,12 +24,17 @@
 			leaders in the tech industry.
 		</li>
 		<li>
-			<a href="/" class="link">LinkedIn discussions</a> on topics that are relevant to tech professionals,
-			including programming news, hiring strategies, coding best practices, and more.
+			<a
+				href="https://linkedin.com/in/monarchwadia"
+				class="link"
+				rel="noreferrer noopener"
+				target="_blank">LinkedIn discussions</a
+			> on topics that are relevant to tech professionals, including programming news, hiring strategies,
+			coding best practices, and more.
 		</li>
 		<li>
-			<a href="/" class="link">Software development services</a>. You can hire me to help you build
-			your software projects, development processes, and development teams.
+			<a href="/services" class="link">Software development services</a>. You can hire me to help
+			you build your software projects, development processes, and development teams.
 		</li>
 	</ul>
 	<h1 class="text-3xl font-bold">About me.</h1>
