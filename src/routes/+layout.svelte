@@ -10,7 +10,7 @@
 </script>
 
 <!-- Body -->
-<div class="mx-auto max-w-lg flex flex-col gap-8 p-8">
+<div class="mx-auto max-w-2xl flex flex-col gap-8 p-8">
 	<HeaderMetatags />
 	<!-- Navbar -->
 	<div class="navbar bg-base-100 border-2 rounded-md border-base-content">
