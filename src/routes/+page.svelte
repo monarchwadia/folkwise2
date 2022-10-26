@@ -1,11 +1,9 @@
 <script>
-	import DogsNose from '../journal/dogs-nose.md';
-
-	const markdowns = [DogsNose];
+	import { markdowns } from './journal/markdowns';
 </script>
 
 <div>
 	{#each markdowns as Markdown}
-		<Markdown />
+		<Markdown.render />
 	{/each}
 </div>

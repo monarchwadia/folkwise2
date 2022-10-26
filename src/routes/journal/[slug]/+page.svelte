@@ -1,15 +1,18 @@
 <script lang="ts">
+	import { markdowns } from './../markdowns';
 	import { page } from '$app/stores';
-	import DogsNose from '../../../journal/dogs-nose.md';
 
-	const markdowns = [DogsNose];
+	const thisMarkdown = markdowns.find((m) => {
+		console.log(m.slug, $page.params.slug);
+		return m.slug === $page.params.slug;
+	});
 
-	const thisMarkdown = markdowns.find((m) => m.slug === $page.params.slug);
+	const thisMarkdownRender = thisMarkdown?.render;
+	console.log(thisMarkdownRender.render);
 </script>
 
 <div>
-	{$page.params.slug}
-	{#each markdowns as Markdown}
-		<Markdown />
-	{/each}
+	{#if thisMarkdownRender}
+		{@html thisMarkdownRender.render().html}
+	{/if}
 </div>
