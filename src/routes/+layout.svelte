@@ -1,5 +1,5 @@
 <script>
-	import HeaderMetatags from '../components/HeaderMetatags.svelte';
+	import HeaderMetatags from 'src/components/HeaderMetatags.svelte';
 	import '../app.css';
 
 	const links = [

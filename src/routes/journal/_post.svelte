@@ -1,6 +1,4 @@
 <script>
-	import HeaderMetatags from '../../components/HeaderMetatags.svelte';
-
 	/** @type {string} */
 	export let title;
 	/** @type {string} */
@@ -15,7 +13,6 @@
 </script>
 
 <div class="flex flex-col gap-8 mb-8 border-b-2 border-base-content">
-	<HeaderMetatags {title} />
 	<h1 class="mb-2 font-bold text-3xl">{title}</h1>
 	<a href={'/journal/' + slug} class="link">Link</a>
 	<p class="mt-0 mb-0">Published: {new Date(date).toLocaleDateString()}</p>
