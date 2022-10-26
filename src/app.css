@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-moz-selection, ::selection {
+  color: rgb(9, 9, 11);
+  background: rgb(220, 165, 76);
+
+}
