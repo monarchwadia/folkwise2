@@ -7,5 +7,5 @@
 	{#each markdowns as Markdown}
 		<Markdown.render />
 	{/each}
-	<HeaderMetatags title="" />
+	<HeaderMetatags title="Home" />
 </div>
