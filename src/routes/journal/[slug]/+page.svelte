@@ -7,12 +7,12 @@
 		return m.slug === $page.params.slug;
 	});
 
-	const thisMarkdownRender = thisMarkdown?.render;
+	const thisMarkdownRender = thisMarkdown && thisMarkdown.render;
 	console.log(thisMarkdownRender.render);
 </script>
 
 <div>
 	{#if thisMarkdownRender}
-		{@html thisMarkdownRender.render().html}
+		{@html thisMarkdownRender.render && thisMarkdownRender.render().html}
 	{/if}
 </div>
