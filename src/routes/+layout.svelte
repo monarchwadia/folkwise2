@@ -1,5 +1,11 @@
 <script>
 	import '../app.css';
+
+	const links = [
+		{ href: '/', label: 'Journal' },
+		{ href: '/services', label: 'Services' },
+		{ href: '/about', label: 'About' }
+	];
 </script>
 
 <!-- Body -->
@@ -9,27 +15,41 @@
 		<div class="flex-1">
 			<a href="/" class="btn btn-ghost normal-case text-xl">Folkwise.io</a>
 		</div>
-		<div class="flex-none">
+		<div class="flex-none hidden sm:block">
 			<ul class="menu menu-horizontal p-0">
-				<li><a href="/">Item 1</a></li>
-				<li>
-					<a href="/">
-						Parent
-						<svg
-							class="fill-current"
-							xmlns="http://www.w3.org/2000/svg"
-							width="20"
-							height="20"
-							viewBox="0 0 24 24"
-							><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg
-						>
-					</a>
-					<ul class="p-2 bg-base-100">
-						<li><a href="/">Submenu 1</a></li>
-						<li><a href="/">Submenu 2</a></li>
-					</ul>
-				</li>
-				<li><a href="/">Item 3</a></li>
+				{#each links as link}
+					<li>
+						<a href={link.href}>{link.label}</a>
+					</li>
+				{/each}
+			</ul>
+		</div>
+		<div class="flex-none sm:hidden dropdown">
+			<label tabindex="0" class="btn btn-ghost btn-circle">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-5 w-5"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					><path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M4 6h16M4 12h16M4 18h7"
+					/></svg
+				>
+			</label>
+			<ul
+				tabindex="0"
+				class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+				style={'--tw-translate-x: -150px'}
+			>
+				{#each links as link}
+					<li>
+						<a href={link.href}>{link.label}</a>
+					</li>
+				{/each}
 			</ul>
 		</div>
 	</div>
@@ -37,12 +57,10 @@
 	<!-- Looking for work -->
 	<div class="card bg-slate-900 text-base-content">
 		<div class="card-body">
-			<h2 class="card-title">💼 I'm actively looking for work.</h2>
+			<h2 class="card-title">💼 I'm looking for work.</h2>
 			<p>
-				I've specialized in React, Typescript, Node, and Java. I am looking for 100% remote,
-				hands-on dev work, but I'm also <span class="italic">very</span> comfy on the business side.
-				If you'd like to hire me, we should chat. You can
-				<a class="link" href="/">contact me here</a>.
+				I'm looking for 100% remote, hands-on programming work. If you'd like to hire me,
+				<a class="link" href="/">let's get in touch</a>.
 			</p>
 		</div>
 	</div>
