@@ -60,7 +60,12 @@
 			<h2 class="card-title">💼 I'm looking for work.</h2>
 			<p>
 				I'm looking for 100% remote, hands-on programming work. If you'd like to hire me,
-				<a class="link" href="/">let's get in touch</a>.
+				<a
+					class="link"
+					href="https://linkedin.com/in/monarchwadia"
+					target="_blank"
+					rel="noopener noreferrer nofollow">let's get in touch</a
+				>.
 			</p>
 		</div>
 	</div>
