@@ -31,7 +31,7 @@ export class MarkdownService {
       .use(rehypeStringify)
   }
 
-  public async getMarkdown(slug: string) {
+  public getMarkdown(slug: string) {
     // find a file that matches the slug and extension
     const fileContents = this.readFileBySlug(slug);
 
@@ -42,12 +42,13 @@ export class MarkdownService {
   }
 
   private readFileBySlug(slug: string): string {
-    const file = this.options.extensions
-      .map(ext => path.join(this.options.srcDir, `${slug}.${ext}`))
-      .find(file => fs.existsSync(file));
+    const possiblePaths = this.options.extensions
+      .map(ext => path.resolve(__dirname, this.options.srcDir, `${slug}.${ext}`))
+
+    const file = possiblePaths.find(file => fs.existsSync(file));
 
     if (!file) {
-      throw new Error(`Could not find file for slug ${slug}`);
+      throw new Error(`Could not find file for slug ${slug}. Paths tried: ${possiblePaths.join(', ')}`);
     };
 
     return fs.readFileSync(file, 'utf8');
