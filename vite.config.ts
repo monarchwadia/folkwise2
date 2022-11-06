@@ -7,8 +7,8 @@ const config: UserConfig = {
 		sveltekit(),
 		viteStaticCopy({
 			targets: [
-				{ src: 'journal', dest: 'journal' },
-				{ src: 'patterns', dest: 'patterns' },
+				{ src: 'journal', dest: '.' },
+				{ src: 'patterns', dest: '.' },
 			]
 		})
 	]
