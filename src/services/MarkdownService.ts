@@ -4,8 +4,10 @@ import { unified, type Processor } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkFrontmatter, { type Root } from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
-import remarkRehype from 'remark-rehype'
+import remarkParseFrontmatter from 'remark-parse-frontmatter'
 import rehypeStringify from 'rehype-stringify'
+import remarkRehype from 'remark-rehype';
+import rehypeFormat from 'rehype-format'
 
 
 type Options = {
@@ -13,33 +15,35 @@ type Options = {
   extensions: string[];
 }
 
-type File = {
-  path: string;
+type Markdown = {
   content: string;
   frontmatter: Record<string, any>
 }
 
 export class MarkdownService {
-  parser: Processor;
+  markdownParser: Processor;
 
   constructor(private options: Options) {
-    this.parser = unified()
-      .use(remarkParse)
-      .use(remarkFrontmatter)
-      .use(remarkGfm)
-      .use(remarkRehype)
-      .use(rehypeStringify)
+    this.markdownParser = this.buildMarkdownParser()
   }
 
-  public getMarkdown(slug: string) {
+  getMarkdown(slug: string): Markdown {
     // find a file that matches the slug and extension
     const fileContents = this.readFileBySlug(slug);
+    const file = this.markdownParser.processSync(fileContents);
 
-    // parse the frontmatter
-    const xfile = this.parser.processSync(fileContents);
+    const content = file.toString()
+    const frontmatter = file.data.frontmatter as Record<string, any>;
 
-    console.log('XFILE', xfile);
+    const markdown: Markdown = {
+      content,
+      frontmatter
+    }
+
+    return markdown;
   }
+
+  // private
 
   private readFileBySlug(slug: string): string {
     const possiblePaths = this.options.extensions
@@ -54,8 +58,14 @@ export class MarkdownService {
     return fs.readFileSync(file, 'utf8');
   }
 
-  private parseFrontmatter(content: string) {
-    // parse the frontmatter
-
+  private buildMarkdownParser(): Processor<void, void, void, void> {
+    return unified()
+      .use(remarkParse)
+      .use(remarkFrontmatter, ['yaml', 'toml'])
+      .use(remarkParseFrontmatter)
+      .use(remarkGfm)
+      .use(remarkRehype)
+      .use(rehypeFormat)
+      .use(rehypeStringify)
   }
 }

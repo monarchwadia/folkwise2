@@ -1,0 +1,28 @@
+// Vitest Snapshot v1
+
+exports[`MarkdownService > frontmatter > should parse frontmatter 1`] = `
+{
+  "content": "
+<h1>Test</h1>
+<p>This file has frontmatter</p>
+<p>This file also has a table</p>
+<table>
+  <thead>
+    <tr>
+      <th>col1</th>
+      <th>col2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>cool</td>
+      <td>dude</td>
+    </tr>
+  </tbody>
+</table>
+",
+  "frontmatter": {
+    "title": "With Frontmatter",
+  },
+}
+`;
