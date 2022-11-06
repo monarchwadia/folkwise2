@@ -47,7 +47,7 @@ export class MarkdownService {
 
   private readFileBySlug(slug: string): string {
     const possiblePaths = this.options.extensions
-      .map(ext => path.resolve(__dirname, this.options.srcDir, `${slug}.${ext}`))
+      .map(ext => path.resolve(this.options.srcDir, `${slug}.${ext}`))
 
     const file = possiblePaths.find(file => fs.existsSync(file));
 

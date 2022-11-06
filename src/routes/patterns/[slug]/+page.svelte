@@ -19,8 +19,8 @@
 </script>
 
 <div>
-	<h1 class="text-3xl">{data.markdown.frontmatter.title}</h1>
-	<div id="out" class="prose lg:prose-lg" bind:this={ref}>
+	<div id="out" bind:this={ref}>
+		<!-- This is backend mode... don't do it in the browser. -->
 		{@html content}
 	</div>
 </div>
