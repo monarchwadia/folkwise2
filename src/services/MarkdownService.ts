@@ -15,9 +15,12 @@ type Options = {
   extensions: string[];
 }
 
+type Frontmatter = Record<string, any>;
+
 type Markdown = {
   content: string;
-  frontmatter: Record<string, any>
+  frontmatter: Frontmatter;
+  slug: string;
 }
 
 export class MarkdownService {
@@ -27,7 +30,7 @@ export class MarkdownService {
     this.markdownParser = this.buildMarkdownParser()
   }
 
-  getMarkdown(slug: string): Markdown {
+  getBySlug(slug: string): Markdown {
     // find a file that matches the slug and extension
     const fileContents = this.readFileBySlug(slug);
     const file = this.markdownParser.processSync(fileContents);
@@ -37,10 +40,36 @@ export class MarkdownService {
 
     const markdown: Markdown = {
       content,
-      frontmatter
+      frontmatter,
+      slug
     }
 
     return markdown;
+  }
+
+  list(): Markdown[] {
+    const srcDirPath = path.resolve(this.options.srcDir);
+    const files = fs.readdirSync(srcDirPath);
+
+    const slugs = files
+      .filter(file => {
+        const ext = path.extname(file).replace(".", "");
+        return this.options.extensions.includes(ext);
+      })
+      .map(file => path.basename(file, path.extname(file))); // remove extension from filename
+
+    const frontmatters: Markdown[] = slugs.map(slug => {
+      const fileContents = this.readFileBySlug(slug);
+      const file = this.markdownParser.processSync(fileContents);
+      const frontmatter = file.data.frontmatter as Frontmatter;
+      return {
+        content: '',
+        frontmatter,
+        slug
+      };
+    });
+
+    return frontmatters;
   }
 
   // private

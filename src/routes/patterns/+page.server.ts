@@ -8,13 +8,9 @@ const patternMarkdownService = new MarkdownService({
 
 
 export const load: Load = ({ params }) => {
-  const { slug } = params;
-
-  if (!slug) {
-    throw new Error('No slug provided');
-  }
+  const markdowns = patternMarkdownService.list();
 
   return {
-    markdown: patternMarkdownService.getBySlug(slug)
+    markdowns
   };
 }

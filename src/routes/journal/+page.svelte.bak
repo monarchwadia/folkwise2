@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { markdowns } from './../markdowns';
-	import { page } from '$app/stores';
+	import { markdowns } from './../markdowns../markdownsage } from '$app/stores';
 	import { browser, dev, prerendering } from '$app/environment';
 	import { onMount } from 'svelte';
 

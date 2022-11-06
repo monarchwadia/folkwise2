@@ -24,5 +24,6 @@ exports[`MarkdownService > frontmatter > should parse frontmatter 1`] = `
   "frontmatter": {
     "title": "With Frontmatter",
   },
+  "slug": "with-frontmatter",
 }
 `;

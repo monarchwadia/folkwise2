@@ -15,6 +15,6 @@ export const load: Load = ({ params }) => {
   }
 
   return {
-    markdown: patternMarkdownService.getMarkdown(slug)
+    markdown: patternMarkdownService.getBySlug(slug)
   };
 }

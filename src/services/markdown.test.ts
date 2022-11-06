@@ -6,24 +6,29 @@ describe("MarkdownService", () => {
 
   beforeAll(() => {
     markdownService = new MarkdownService({
-      srcDir: "./markdown.test.data",
+      srcDir: "src/services/markdown.test.data",
       extensions: ["md"],
     });
   });
 
   describe("frontmatter", () => {
     it("should parse frontmatter", () => {
-      const file = markdownService.getMarkdown("with-frontmatter");
+      const file = markdownService.getBySlug("with-frontmatter");
       expect(file).toMatchSnapshot();
     })
   })
 
   it("should work", () => {
     // don't throw
-    markdownService.getMarkdown("empty");
+    markdownService.getBySlug("empty");
   });
 
   it("should throw if file not found", () => {
-    expect(() => markdownService.getMarkdown("not-found")).toThrowError("Could not find file");
+    expect(() => markdownService.getBySlug("not-found")).toThrowError("Could not find file");
   });
+
+  it("should return all files", () => {
+    const markdowns = markdownService.list();
+    expect(markdowns.length).toEqual(2);
+  })
 });
