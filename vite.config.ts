@@ -7,8 +7,8 @@ const config: UserConfig = {
 		sveltekit(),
 		viteStaticCopy({
 			targets: [
-				{ src: 'journal', dest: '.' },
-				{ src: 'patterns', dest: '.' },
+				{ src: 'journal', dest: '../..' }, // this path is carefully set to be relative to the usage of markdown service
+				{ src: 'patterns', dest: '../..' }, // this path is carefully set to be relative to the usage of markdown service
 			]
 		})
 	]

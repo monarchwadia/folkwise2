@@ -1,10 +1,5 @@
 import type { Load } from '@sveltejs/kit';
-import { MarkdownService } from 'src/services/MarkdownService';
-
-const patternMarkdownService = new MarkdownService({
-  srcDir: ("journal"),
-  extensions: ["md"],
-});
+import { journalMarkdownService } from '../journalMarkdownService';
 
 
 export const load: Load = ({ params }) => {
@@ -15,6 +10,6 @@ export const load: Load = ({ params }) => {
   }
 
   return {
-    markdown: patternMarkdownService.getBySlug(slug)
+    markdown: journalMarkdownService.getBySlug(slug)
   };
 }
