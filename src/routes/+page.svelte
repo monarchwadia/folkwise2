@@ -8,7 +8,7 @@
 
 <div class="flex flex-col gap-10">
 	{#each markdowns as md}
-		<Markdown title={md.frontmatter.title} content={md.content} />
+		<Markdown title={md.frontmatter.title} content={md.content} url={`/journal/${md.slug}`} />
 		<hr class="border-base-content" />
 	{/each}
 </div>
