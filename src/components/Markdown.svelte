@@ -1,6 +1,6 @@
 <script lang="ts">
 	export let title: string;
-	export let url: string | undefined;
+	export let url: string | undefined = undefined;
 	export let content: string;
 </script>
 

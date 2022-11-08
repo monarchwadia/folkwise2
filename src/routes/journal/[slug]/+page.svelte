@@ -1,26 +1,11 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
+	import Markdown from 'src/components/Markdown.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
-
-	let ref: any;
-	let content = '';
-
-	// find the markdown
-
-	$: content = data?.markdown?.content || '';
-
-	// // browser-only behaviour
-	onMount(() => {
-		ref.innerHTML = content;
-	});
+	const markdown = data.markdown;
 </script>
 
 <div>
-	<h1 class="text-3xl">{data.markdown.frontmatter.title}</h1>
-	<div id="out" class="prose lg:prose-lg" bind:this={ref}>
-		{@html content}
-	</div>
+	<Markdown title={markdown.frontmatter.title} content={markdown.content} />
 </div>
