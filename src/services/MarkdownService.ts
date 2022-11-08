@@ -58,7 +58,7 @@ export class MarkdownService {
       })
       .map(file => path.basename(file, path.extname(file))); // remove extension from filename
 
-    const markdowns: Markdown[] = slugs.map(slug => {
+    const unfilteredMarkdowns: Markdown[] = slugs.map(slug => {
       const fileContents = this.readFileBySlug(slug);
       const file = this.markdownParser.processSync(fileContents);
       const frontmatter = file.data.frontmatter as Frontmatter;
@@ -73,7 +73,17 @@ export class MarkdownService {
     });
 
     // return only those which have frontmatter
-    return markdowns.filter(m => !!m.frontmatter);
+    const markdowns: Markdown[] = [];
+    unfilteredMarkdowns.forEach((md) => {
+      if (!md.frontmatter) {
+        console.error("Error! Markdown with slug " + md.slug + " does not have frontmatter! Skipping...");
+        return;
+      }
+
+      markdowns.push(md);
+    });
+
+    return markdowns;
   }
 
   // private
