@@ -58,7 +58,7 @@ export class MarkdownService {
       })
       .map(file => path.basename(file, path.extname(file))); // remove extension from filename
 
-    const frontmatters: Markdown[] = slugs.map(slug => {
+    const markdowns: Markdown[] = slugs.map(slug => {
       const fileContents = this.readFileBySlug(slug);
       const file = this.markdownParser.processSync(fileContents);
       const frontmatter = file.data.frontmatter as Frontmatter;
@@ -72,7 +72,8 @@ export class MarkdownService {
       };
     });
 
-    return frontmatters;
+    // return only those which have frontmatter
+    return markdowns.filter(m => !!m.frontmatter);
   }
 
   // private

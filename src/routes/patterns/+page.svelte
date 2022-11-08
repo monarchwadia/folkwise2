@@ -1,15 +1,16 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
 	import type { PageData } from './$types';
+	import Markdown from 'src/components/Markdown.svelte';
 
 	export let data: PageData;
 </script>
 
 <div>
 	{#each data.markdowns as markdown}
-		<a href={`patterns/${markdown.slug}`} class="link">
-			{markdown.frontmatter.title}
-		</a>
+		<Markdown
+			title={markdown.frontmatter.title}
+			content={markdown.content}
+			url={'/patterns/' + markdown.slug}
+		/>
 	{/each}
 </div>
