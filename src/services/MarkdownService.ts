@@ -47,7 +47,7 @@ export class MarkdownService {
     return markdown;
   }
 
-  list(): Markdown[] {
+  list(includeContent = false): Markdown[] {
     const srcDirPath = path.resolve(this.options.srcDir);
     const files = fs.readdirSync(srcDirPath);
 
@@ -62,8 +62,11 @@ export class MarkdownService {
       const fileContents = this.readFileBySlug(slug);
       const file = this.markdownParser.processSync(fileContents);
       const frontmatter = file.data.frontmatter as Frontmatter;
+
+      const content = includeContent ? file.toString() : '';
+
       return {
-        content: '',
+        content,
         frontmatter,
         slug
       };
