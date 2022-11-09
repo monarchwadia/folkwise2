@@ -15,7 +15,7 @@ Marketing list - 100 hours
 - LinkedIn dressup
 - 5 relevant blog articles on Folkwise.io
 - 5 relevant Patterns on Folkwise.io
-- Process pitch deck
+- Process pitch deck on Pandadoc, easily signable
 - Contract
 
 How can I launch this by Nov 20?
