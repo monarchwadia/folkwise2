@@ -8,6 +8,8 @@ import remarkParseFrontmatter from 'remark-parse-frontmatter'
 import rehypeStringify from 'rehype-stringify'
 import remarkRehype from 'remark-rehype';
 import rehypeFormat from 'rehype-format'
+import rehypeExternalLinks from 'rehype-external-links';
+import { linkTagDataReload } from "src/linkTagDataReload.plugin.rehype";
 
 
 type Options = {
@@ -17,7 +19,7 @@ type Options = {
 
 type Frontmatter = Record<string, any>;
 
-type Markdown = {
+export type Markdown = {
   content: string;
   frontmatter: Frontmatter;
   slug: string;
@@ -109,6 +111,8 @@ export class MarkdownService {
       .use(remarkGfm)
       .use(remarkRehype)
       .use(rehypeFormat)
+      .use(rehypeExternalLinks)
+      .use(linkTagDataReload)
       .use(rehypeStringify)
   }
 }

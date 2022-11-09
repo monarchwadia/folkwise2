@@ -37,6 +37,7 @@
 	"type": "module",
 	"dependencies": {
 		"daisyui": "^2.33.0",
+		"rehype-external-links": "^2.0.1",
 		"rehype-format": "^4.0.1",
 		"rehype-stringify": "^9.0.3",
 		"remark-frontmatter": "^4.0.1",
