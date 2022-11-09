@@ -5,14 +5,14 @@
 </script>
 
 <div class="flex flex-col gap-10">
-	<h1 class="text-3xl">
+	<h1 class="text-4xl font-bold">
 		{#if url}
 			<a class="link" href={url}>{title}</a>
 		{:else}
 			{title}
 		{/if}
 	</h1>
-	<div class="prose prose-xl">
+	<div class="prose prose-md prose-li:text-xl">
 		{@html content}
 	</div>
 </div>
