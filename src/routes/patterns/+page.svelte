@@ -3,14 +3,27 @@
 	import Markdown from 'src/components/Markdown.svelte';
 
 	export let data: PageData;
+
+	const categorized: Record<string, Markdown[]> = {};
+
+	data.markdowns.forEach((m) => {
+		categorized[m.frontmatter.category] ||= [];
+		categorized[m.frontmatter.category].push(m);
+	});
+
+	// capitalze the first letter of a string
+	const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1);
 </script>
 
 <div>
-	{#each data.markdowns as markdown}
-		<Markdown
-			title={markdown.frontmatter.title}
-			content={markdown.content}
-			url={'/patterns/' + markdown.slug}
-		/>
+	{#each Object.entries(categorized) as [key, markdowns]}
+		<h1 class="text-2xl font-bold">{capitalize(key)}</h1>
+		<ul class="list-disc">
+			{#each markdowns as markdown}
+				<li class="link">
+					<a href={`/patterns/${markdown.slug}`}>{markdown.frontmatter.title}</a>
+				</li>
+			{/each}
+		</ul>
 	{/each}
 </div>
