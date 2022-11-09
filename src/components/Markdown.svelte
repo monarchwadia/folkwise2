@@ -12,7 +12,7 @@
 			{title}
 		{/if}
 	</h1>
-	<div class="prose prose-md prose-li:text-xl prose-p:text-xl">
+	<div class="prose prose-md">
 		{@html content}
 	</div>
 </div>
