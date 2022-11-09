@@ -1,6 +1,6 @@
 ---
 title: Use very short job descriptions
-tags: hiring
+category: hiring
 ---
 
 Shorter JDs which are 2 or 3 paragraphs long, with no more than 8 bullet points, lead to healthier hiring pipelines.
