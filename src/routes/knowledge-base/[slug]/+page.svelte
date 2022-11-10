@@ -7,6 +7,6 @@
 </script>
 
 <div class="flex flex-col gap-4">
-	<div class="badge badge-info badge-lg">Pattern</div>
+	<div class="badge badge-lg">{markdown.frontmatter.category}</div>
 	<Markdown title={markdown.frontmatter.title} content={markdown.content} />
 </div>
