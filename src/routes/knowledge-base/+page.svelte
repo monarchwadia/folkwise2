@@ -17,13 +17,14 @@
 
 <div>
 	{#each Object.entries(categorized) as [key, markdowns]}
-		<h1 class="text-2xl font-bold">{capitalize(key)}</h1>
-		<ul class="list-disc">
-			{#each markdowns as markdown}
-				<li class="link">
-					<a href={`/knowledge-base/${markdown.slug}`}>{markdown.frontmatter.title}</a>
-				</li>
-			{/each}
-		</ul>
+		<h1 class="text-2xl font-bold my-2">{capitalize(key)}</h1>
+		{#each markdowns as markdown}
+			<p>
+				<a class="hover:link" href={`/knowledge-base/${markdown.slug}`}>
+					<span class="text-zinc-700">⧉</span>
+					{markdown.frontmatter.title}
+				</a>
+			</p>
+		{/each}
 	{/each}
 </div>
