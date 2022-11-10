@@ -3,22 +3,19 @@ title: Use very short job descriptions
 category: hiring
 ---
 
-Shorter JDs which are 2 or 3 paragraphs long, with no more than 8 bullet points, lead to healthier hiring pipelines. They're great for candidate experience because they're short and sweet. The intentional lack of details also prevents qualified candidates from self-selecting out due to a misunderstanding. They're also really easy for teams to generate and iterate on.
+Short, casual job descriptions tend to outperform long, formal ones. Candidates find them easier to read, and your team will find them easier to manage.
 
-Here are a few sample JDs that you could use to get started.
+Here is a sample JD that will outperform most long-form job descriptions.
 
 ```
-Senior Software Engineer, React/TypeScript
-$100,000 - $150,000
-Remote, Anywhere
+Title     : Senior Full Stack React Developer
+Employer  : CompanyName
+Location  : Remote, Anywhere
+Salary    : $ 100,000 - 150,000
 
 CompanyName is a SaaS platform that helps junior developers
 in remote areas of the country get hired faster through the
-power of hackathons. We're enriching the lives of 
-individuals, families, and communities across North America
-by providing career switchers and bootcamp grads with
-access to top-tier remote software engineering jobs,
-regardless of where the candidate lives.
+power of hackathons.
 
 This role will help build Version 2 of our platform. We're
 looking for people who can make the right technical choices
@@ -34,7 +31,4 @@ Here's what we're looking for:
 3. React, Typescript and Node experience is a plus
 4. Experience in parallel build projects is a plus
 5. Experience mentoring junior developers is a huge plus
-
-To apply, click here.
-
 ```

@@ -6,6 +6,7 @@
 	const markdown = data.markdown;
 </script>
 
-<div>
+<div class="flex flex-col gap-4">
+	<div class="badge badge-success badge-lg">Journal</div>
 	<Markdown title={markdown.frontmatter.title} content={markdown.content} />
 </div>

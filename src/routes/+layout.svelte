@@ -66,7 +66,7 @@
 			<slot />
 		</main>
 	</div>
-	<div class="max-w-md sticky top-0">
+	<!-- <div class="max-w-md sticky top-0">
 		<SalesCard />
-	</div>
+	</div> -->
 </div>

@@ -6,8 +6,7 @@
 	const { markdown } = data;
 </script>
 
-<Markdown
-	title={markdown.frontmatter.title}
-	content={markdown.content}
-	url={'/patterns/' + markdown.slug}
-/>
+<div class="flex flex-col gap-4">
+	<div class="badge badge-info badge-lg">Pattern</div>
+	<Markdown title={markdown.frontmatter.title} content={markdown.content} />
+</div>

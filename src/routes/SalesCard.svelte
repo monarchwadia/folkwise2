@@ -18,7 +18,7 @@
 				> And it can be done in weeks, not months.
 			</p>
 			<button
-				class="btn btn-outline border-green-600 text-green-600 font-normal text-lg normal-case hover:btn-success"
+				class="btn btn-outline border-green-600 text-green-600 font-normal text-lg normal-case hover:btn-success "
 				>Let us show you how.</button
 			>
 			<p>
