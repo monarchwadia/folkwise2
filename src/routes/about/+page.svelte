@@ -20,8 +20,9 @@
 	<p>Currently, I offer my insights in 3 formats:</p>
 	<ul class="list-disc pl-4">
 		<li>
-			<a href="/" class="link">A journal</a> that offers bite-sized and actionable insights for business
-			leaders in the tech industry.
+			<a href="/" class="link">A journal</a> and a
+			<a href="/patterns" class="link">knowledge base </a> that offer bite-sized and actionable insights
+			for business leaders in the tech industry.
 		</li>
 		<li>
 			<a
