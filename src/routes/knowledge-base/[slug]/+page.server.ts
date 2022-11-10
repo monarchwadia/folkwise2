@@ -1,5 +1,5 @@
 import type { Load } from '@sveltejs/kit';
-import { patternMarkdownService } from '../patternMarkdownService';
+import { patternMarkdownService } from '../knowledgeBaseMarkdownService';
 
 
 export const load: Load = ({ params }) => {

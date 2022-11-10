@@ -1,9 +1,6 @@
 ---
 title: 'Community before MVP'
-date: 2022-09-12
-excerpt: 'Your software product is only as good as the community that uses and supports it.'
-username: 'monarchwadia'
-slug: 2022-09-12-community-before-mvp
+category: community building
 ---
 
 You should build your community of users before you build your MVP.

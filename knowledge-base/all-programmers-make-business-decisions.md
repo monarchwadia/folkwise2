@@ -1,9 +1,6 @@
 ---
-title: 'Responsibility'
-date: 2022-05-08
-excerpt: 'Software engineers make choices that ripple through the economy.'
-username: 'monarchwadia'
-slug: 2022-05-08-responsibility
+title: 'All programmers make business decisions'
+category: philosophy
 ---
 
 Programmers don't just write code. We influence human behaviour and the policies and operations of human organizations.

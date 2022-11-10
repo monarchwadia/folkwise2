@@ -1,9 +1,6 @@
 ---
-title: "We're still a very new profession."
-date: 2022-05-12
-excerpt: 'We often forget how incredibly *new* software engineering is, and that we would benefit greatly from learning from other fields.'
-username: 'monarchwadia'
-slug: 2022-05-12-we-are-still-a-very-new-profession
+title: "Software engineering is still a very new profession."
+category: careers
 ---
 
 We often forget how incredibly _new_ software engineering is, and that we would benefit greatly from learning from other fields.
@@ -34,7 +31,7 @@ Can we learn from other professions how to:
 | Electrical Engineers        | 200 years      |
 | Automotive Engineers        | 160 years      |
 | Aerospace Engineers         | 120 years      |
-| **_Software Engineers_**    | **_70 years_** |
+| 🚨 &nbsp; **Software Engineers**   | **70 years** &nbsp; 🚨    |
 | Developer Relations         | 40 years       |
 | Data Scientists             | 20 years       |
 | Coding Bootcamp Instructors | 10 years       |

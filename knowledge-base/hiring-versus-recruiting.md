@@ -1,9 +1,6 @@
 ---
 title: 'Hiring versus recruiting'
-date: 2022-05-20
-excerpt: 'Trust when recruiting. Verify when hiring. Mistakes happen when you do the opposite.'
-username: 'monarchwadia'
-slug: 2022-05-20-hiring-versus-recruiting
+category: tech recruiting
 ---
 
 Some recent hard learnings for me around hiring & recruiting...

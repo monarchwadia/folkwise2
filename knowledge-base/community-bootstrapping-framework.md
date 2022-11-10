@@ -1,9 +1,6 @@
 ---
 title: 'Community bootstrapping framework'
-date: 2022-07-27
-excerpt: 'This is a very basic community bootstrapping framework, but it should help you get started with your own community.'
-username: 'monarchwadia'
-slug: 2022-07-27-community-bootstrapping-framework
+category: community building
 ---
 
 This is a very basic community bootstrapping framework, but it should help you get started with your own community.

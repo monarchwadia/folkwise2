@@ -1,9 +1,6 @@
 ---
-title: 'Push it anyway.'
-date: 2022-05-07
-excerpt: 'Treat your LinkedIn like a dealership and your Github like a mechanic shop.'
-username: 'monarchwadia'
-slug: 2022-05-07-push-it-anyway
+title: 'Github versus LinkedIn.'
+category: careers
 ---
 
 If you're a developer who is looking for work, you need to treat your LinkedIn like a dealership and your Github like a mechanic shop.

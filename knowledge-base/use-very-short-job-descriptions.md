@@ -1,6 +1,6 @@
 ---
 title: Use very short job descriptions
-category: hiring
+category: tech recruiting
 ---
 
 Short, casual job descriptions tend to outperform long, formal ones. Candidates find them easier to read, and your team will find them easier to manage.

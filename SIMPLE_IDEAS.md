@@ -13,8 +13,7 @@ Marketing list - 100 hours
 - Website dressup
 - Website contact form
 - LinkedIn dressup
-- 5 relevant blog articles on Folkwise.io
-- 5 relevant Patterns on Folkwise.io
+- 5 relevant knowledge base pages on Folkwise.io
 - Process pitch deck on Pandadoc, easily signable
 - Contract
 

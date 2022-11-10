@@ -1,8 +1,6 @@
 ---
 title: "We'll see."
-date: 2022-05-11
-excerpt: 'There was once a wise farmer. One day, her prize horse ran away.'
-username: 'monarchwadia'
+category: philosophy
 ---
 
 There was once a wise farmer. One day, her prize horse ran away.

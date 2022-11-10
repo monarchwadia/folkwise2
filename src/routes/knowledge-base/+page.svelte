@@ -21,7 +21,7 @@
 		<ul class="list-disc">
 			{#each markdowns as markdown}
 				<li class="link">
-					<a href={`/patterns/${markdown.slug}`}>{markdown.frontmatter.title}</a>
+					<a href={`/knowledge-base/${markdown.slug}`}>{markdown.frontmatter.title}</a>
 				</li>
 			{/each}
 		</ul>

@@ -1,6 +1,6 @@
 ---
 title: Advantages and disadvantages of hiring bootcamp grads
-category: hiring
+category: tech recruiting
 ---
 
 # Advantages

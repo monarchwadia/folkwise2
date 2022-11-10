@@ -4,6 +4,7 @@ date: 2022-05-09
 excerpt: 'Aesthetics, code quality, feature richness, even reliability are unimportant compared to the bottom line.'
 username: 'monarchwadia'
 slug: 2022-05-09-code-that-makes-money-stinks
+category: programming best practices
 ---
 
 Complaining about code quality is easy. Writing code that turns a profit is infinitely harder.
