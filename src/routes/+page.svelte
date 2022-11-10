@@ -16,25 +16,21 @@
 		experience. It contains my efforts to make sense of the tech talent shortage. Both for others
 		and for myself.
 	</p>
-	<h1 class="text-3xl font-bold">Folkwise.io is how I distill my 10+ years of tech experience.</h1>
-	<p>Currently, I offer my insights in 3 formats:</p>
+	<h1 class="text-3xl font-bold">Quick links.</h1>
 	<ul class="list-disc pl-4">
 		<li>
-			A <a href="/knowledge-base" class="link">knowledge base </a> that offer bite-sized and actionable
-			insights for business leaders in the tech industry.
+			<a href="/knowledge-base" class="link">Knowledge base</a>
 		</li>
 		<li>
 			<a
 				href="https://linkedin.com/in/monarchwadia"
 				class="link"
 				rel="noreferrer noopener"
-				target="_blank">LinkedIn discussions</a
-			> on topics that are relevant to tech professionals, including programming news, hiring strategies,
-			coding best practices, and more.
+				target="_blank">My LinkedIn</a
+			>
 		</li>
 		<li>
-			<a href="/services" class="link">Software development services</a>. You can hire me to help
-			you build your software projects, development processes, and development teams.
+			<a href="/services" class="link">My services</a>
 		</li>
 	</ul>
 	<h1 class="text-3xl font-bold">About me.</h1>
