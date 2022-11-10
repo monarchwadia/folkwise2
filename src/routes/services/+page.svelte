@@ -23,7 +23,7 @@
 	];
 </script>
 
-<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-6">
 	<h1 class="text-3xl font-bold">I'm a consulting software developer.</h1>
 
 	<p>

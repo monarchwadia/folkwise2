@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-6">
 	<h1 class="text-3xl font-bold">
 		Good software engineering practices <i>must</i> take the talent shortage into account.
 	</h1>

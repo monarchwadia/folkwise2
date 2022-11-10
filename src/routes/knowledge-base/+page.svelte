@@ -15,18 +15,20 @@
 	const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1);
 </script>
 
-<div>
-	<h1 class="text-2xl font-bold my-2">Knowledge Base</h1>
-	<p>A growing repository of articles on a variety of topics, organized by category.</p>
-	{#each Object.entries(categorized) as [key, markdowns]}
-		<h2 class="text-xl font-bold my-2">{capitalize(key)}</h2>
-		{#each markdowns as markdown}
-			<p>
-				<a class="hover:link" href={`/knowledge-base/${markdown.slug}`}>
-					<span class="text-zinc-700">⧉</span>
-					{markdown.frontmatter.title}
-				</a>
-			</p>
+<div class="flex flex-col gap-6">
+	<h1 class="text-3xl font-bold">Knowledge Base</h1>
+	<div>
+		<p>A growing repository of articles on a variety of topics, organized by category.</p>
+		{#each Object.entries(categorized) as [key, markdowns]}
+			<h2 class="text-xl font-bold my-2">{capitalize(key)}</h2>
+			{#each markdowns as markdown}
+				<p>
+					<a class="hover:link" href={`/knowledge-base/${markdown.slug}`}>
+						<span class="text-zinc-700">⧉</span>
+						{markdown.frontmatter.title}
+					</a>
+				</p>
+			{/each}
 		{/each}
-	{/each}
+	</div>
 </div>
