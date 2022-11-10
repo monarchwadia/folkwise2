@@ -1,7 +1,7 @@
 <script>
 	const links = [
 		{ href: '/knowledge-base', label: 'Knowledge Base' },
-		{ href: '/services', label: 'Services' }
+		{ href: '/about', label: 'About' }
 	];
 </script>
 

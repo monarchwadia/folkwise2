@@ -1,81 +1,37 @@
-<script lang="ts">
-	import Rating from './Rating.svelte';
-
-	const s = (label: string, years: number, rating: number) => ({ label, years, rating });
-	let skills = [
-		s('JavaScript', 10, 5),
-		s('Express', 7, 5),
-		s('React', 7, 5),
-		s('Node', 7, 5),
-		s('Typescript', 3, 5),
-		s('Architecture', 10, 5),
-		s('Delivery', 10, 5),
-		s('Mentoring', 6, 5),
-		s('Technical Hiring', 5, 5),
-		s('Technical Vetting', 5, 5),
-		s('Java', 10, 4),
-		s('Postgres', 10, 4),
-		s('DevOps', 6, 4),
-		s('Leadership', 6, 4),
-		s('AWS', 7, 3),
-		s('DevRel', 6, 3),
-		s('Recruiting', 6, 3)
-	];
-</script>
-
 <div class="flex flex-col gap-6">
-	<h1 class="text-3xl font-bold">I'm a consulting software developer.</h1>
+	<h1 class="text-3xl font-bold">About me.</h1>
+	<p>
+		My name is Monarch Wadia. I live in Toronto with my wife and my laptop. I'm a full-stack
+		developer with 10+ years of experience. 5 of those years were spent building my own software
+		agencies and bootstrapped startups. My interests include playing the guitar, keyboard, and
+		woodwind flute (all of them very badly).
+	</p>
 
 	<p>
 		I have over 10 years of experience. I've worked on a wide range of projects, from small websites
-		to large enterprise applications.
+		to large enterprise applications. I really shine when I'm working at the intersection of
+		software development and core business needs. I'm able to take many variables and factors into
+		account that my peers are not familiar with, including sales funnels; conversion rates; user
+		journeys; regulations and compliance; talent sourcing strategy; internal business needs; and
+		marketing.
 	</p>
 
-	<h1 class="text-3xl font-bold">What I excel at.</h1>
-	<p>
-		I'm a strong developer as well as an experienced business builder, and so I really shine when
-		I'm working at the intersection of software development and core business needs. I'm able to
-		take many variables and factors into account that my peers are not familiar with, including
-		sales funnels; conversion rates; user journeys; regulations and compliance; talent sourcing
-		strategy; internal business needs; and marketing.
-	</p>
-
-	<h1 class="text-3xl font-bold">Fun projects that I've worked on.</h1>
+	<h1 class="text-3xl font-bold">Some fun projects that I've worked on.</h1>
 	<ul class="list-disc pl-4">
 		<li>
-			Full-stack web apps, mobile apps, CLI tools, CI/CD pipelines, gigabyte-scale ETL and
+			Countless full-stack web apps, mobile apps, CLI tools, CI/CD pipelines, gigabyte-scale ETL and
 			reporting, serverless lambdas, and other cool tech.
 		</li>
+		<li>A hackathon SaaS platform that eventually had 10,000+ software developers as users.</li>
 		<li>
 			Apprenticeship programs that let my team sidestep the tech talent crunch (reliably) with a
 			combination of vetting, hiring, and training.
 		</li>
-		<li>A hackathon SaaS platform that eventually had 10,000+ software developers as users.</li>
 		<li>
 			Early-stage hiring processes for a freelancer talent marketplace that wanted to hire React and
 			Node developers at scale.
 		</li>
 	</ul>
-
-	<h2 class="text-3xl font-bold">My strongest skills</h2>
-	<table>
-		<tr>
-			<th class="text-left">Skill</th>
-			<th class="text-left">Experience</th>
-			<th class="text-left">Self-rating</th>
-		</tr>
-		{#each skills as { label, years, rating }}
-			<tr>
-				<td>
-					{label}
-				</td>
-				<td>{years} years</td>
-				<td>
-					<Rating val={rating} />
-				</td>
-			</tr>
-		{/each}
-	</table>
 
 	<h1 class="text-3xl font-bold">Case Study #1: SDK Creation in a FinTech Setting</h1>
 

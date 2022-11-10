@@ -30,14 +30,7 @@
 			>
 		</li>
 		<li>
-			<a href="/services" class="link">My services</a>
+			<a href="/about" class="link">About</a>
 		</li>
 	</ul>
-	<h1 class="text-3xl font-bold">About me.</h1>
-	<p>
-		My name is Monarch Wadia. I live in Toronto with my wife and my laptop. I'm a full-stack
-		developer with 10+ years of experience. 5 of those years were spent building my own software
-		agencies and bootstrapped startups. My interests include playing the guitar, keyboard, and
-		woodwind flute (all of them very badly).
-	</p>
 </div>
