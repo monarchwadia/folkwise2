@@ -16,8 +16,10 @@
 </script>
 
 <div>
+	<h1 class="text-2xl font-bold my-2">Knowledge Base</h1>
+	<p>A growing repository of articles on a variety of topics, organized by category.</p>
 	{#each Object.entries(categorized) as [key, markdowns]}
-		<h1 class="text-2xl font-bold my-2">{capitalize(key)}</h1>
+		<h2 class="text-xl font-bold my-2">{capitalize(key)}</h2>
 		{#each markdowns as markdown}
 			<p>
 				<a class="hover:link" href={`/knowledge-base/${markdown.slug}`}>
