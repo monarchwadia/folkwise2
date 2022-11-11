@@ -1,5 +1,5 @@
 import type { Load } from '@sveltejs/kit';
-import { patternMarkdownService } from '../knowledgeBaseMarkdownService';
+import { caseStudyMarkdownService } from '../caseStudyMarkdownService';
 
 
 export const load: Load = ({ params }) => {
@@ -10,6 +10,6 @@ export const load: Load = ({ params }) => {
   }
 
   return {
-    markdown: patternMarkdownService.getBySlug(slug)
+    markdown: caseStudyMarkdownService.getBySlug(slug)
   };
 }

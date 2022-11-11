@@ -12,7 +12,8 @@ const config: UserConfig = {
 		sveltekit(),
 		viteStaticCopy({
 			targets: [
-				{ src: 'knowledge-base', dest: '../..' }, // this path is carefully set to be relative to the usage of markdown service
+				{ src: 'articles', dest: '../..' }, // this path is carefully set to be relative to the usage of markdown service
+				{ src: 'case-studies', dest: '../..' }, // this path is carefully set to be relative to the usage of markdown service
 			]
 		})
 	]

@@ -16,14 +16,14 @@
 </script>
 
 <div class="flex flex-col gap-6">
-	<h1 class="text-3xl font-bold">Knowledge Base</h1>
+	<h1 class="text-3xl font-bold">Articles</h1>
 	<div>
 		<p>A growing repository of articles on a variety of topics, organized by category.</p>
 		{#each Object.entries(categorized) as [key, markdowns]}
 			<h2 class="text-xl font-bold my-2">{capitalize(key)}</h2>
 			{#each markdowns as markdown}
 				<p>
-					<a class="hover:link" href={`/knowledge-base/${markdown.slug}`}>
+					<a class="hover:link" href={`/articles/${markdown.slug}`}>
 						<span class="text-zinc-700">⧉</span>
 						{markdown.frontmatter.title}
 					</a>

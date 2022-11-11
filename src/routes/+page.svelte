@@ -19,7 +19,7 @@
 	<h1 class="text-3xl font-bold">Quick links.</h1>
 	<ul class="list-disc pl-4">
 		<li>
-			<a href="/knowledge-base" class="link">Knowledge base</a>
+			<a href="/articles" class="link">Articles</a>
 		</li>
 		<li>
 			<a
