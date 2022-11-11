@@ -1,6 +1,7 @@
 ---
 title: Mintbean, a Hackathon SaaS Platform
 tags: saas,react,typescript,node,junior devs,hackathons,online communities
+category: product development
 ---
 
 # Problem

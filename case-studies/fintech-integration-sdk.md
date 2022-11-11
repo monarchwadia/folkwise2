@@ -1,6 +1,7 @@
 ---
 title: FinTech Integration SDK
 tags: finance,fintech,sdk,react,frontend,javascript,micro-frontends
+category: product development
 ---
 
 # Problem
