@@ -23,6 +23,7 @@ export type Markdown = {
   content: string;
   frontmatter: Frontmatter;
   slug: string;
+  tags: string[];
 }
 
 export class MarkdownService {
@@ -32,18 +33,26 @@ export class MarkdownService {
     this.markdownParser = this.buildMarkdownParser()
   }
 
-  getBySlug(slug: string): Markdown {
+  getBySlug(slug: string, includeContent = true): Markdown | null {
     // find a file that matches the slug and extension
     const fileContents = this.readFileBySlug(slug);
     const file = this.markdownParser.processSync(fileContents);
 
-    const content = file.toString()
     const frontmatter = file.data.frontmatter as Record<string, any>;
+
+    const content = includeContent ? file.toString() : '';
+    const tags = frontmatter.tags ? frontmatter.tags.split(",") : [];
+
+    if (!frontmatter) {
+      console.error("Error! Markdown with slug [" + slug + "] does not have frontmatter! Skipping...");
+      return null;
+    }
 
     const markdown: Markdown = {
       content,
       frontmatter,
-      slug
+      slug,
+      tags
     }
 
     return markdown;
@@ -60,30 +69,9 @@ export class MarkdownService {
       })
       .map(file => path.basename(file, path.extname(file))); // remove extension from filename
 
-    const unfilteredMarkdowns: Markdown[] = slugs.map(slug => {
-      const fileContents = this.readFileBySlug(slug);
-      const file = this.markdownParser.processSync(fileContents);
-      const frontmatter = file.data.frontmatter as Frontmatter;
-
-      const content = includeContent ? file.toString() : '';
-
-      return {
-        content,
-        frontmatter,
-        slug
-      };
-    });
-
-    // return only those which have frontmatter
-    const markdowns: Markdown[] = [];
-    unfilteredMarkdowns.forEach((md) => {
-      if (!md.frontmatter) {
-        console.error("Error! Markdown with slug " + md.slug + " does not have frontmatter! Skipping...");
-        return;
-      }
-
-      markdowns.push(md);
-    });
+    const markdowns: Markdown[] = slugs
+      .map(slug => this.getBySlug(slug, includeContent))
+      .filter(x => x !== null) as Markdown[];
 
     return markdowns;
   }

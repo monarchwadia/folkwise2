@@ -9,7 +9,13 @@ export const load: Load = ({ params }) => {
     throw new Error('No slug provided');
   }
 
+  const markdown = articlesMarkdownService.getBySlug(slug)
+
+  if (!markdown) {
+    throw new Error('Markdown not found.');
+  }
+
   return {
-    markdown: articlesMarkdownService.getBySlug(slug)
+    markdown
   };
 }

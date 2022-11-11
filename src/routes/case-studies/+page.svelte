@@ -18,7 +18,7 @@
 <div class="flex flex-col gap-6">
 	<h1 class="text-3xl font-bold">Case Studies</h1>
 	<div>
-		<p>Work that we've done in the past.</p>
+		<p>Work that I've done in the past.</p>
 		{#each Object.entries(categorized) as [key, markdowns]}
 			<h2 class="text-xl font-bold my-2">{capitalize(key)}</h2>
 			{#each markdowns as markdown}
