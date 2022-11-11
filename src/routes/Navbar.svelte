@@ -11,7 +11,10 @@
 	class="navbar bg-base-100 border-2 rounded-md border-base-content sticky top-8 shadow-neutral"
 >
 	<div class="flex-1">
-		<a href="/" class="btn btn-ghost normal-case text-xl">Folkwise.io</a>
+		<a href="/" class=" p-2 text-xl flex flex-col">
+			<p class="text-2xl font-bold">Folkwise.io</p>
+			<p class="text-xs">people + programming</p>
+		</a>
 	</div>
 	<div class="flex-none hidden sm:block">
 		<ul class="menu menu-horizontal p-0">
