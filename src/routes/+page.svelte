@@ -1,7 +1,11 @@
+<script>
+	import H1 from 'src/typography/H1.svelte';
+</script>
+
 <div class="flex flex-col gap-6">
-	<h1 class="text-3xl font-bold">
+	<H1>
 		Good software engineering practices <i>must</i> take the talent shortage into account.
-	</h1>
+	</H1>
 	<p>
 		Modern best practices don't take the talent shortage into account at all. They assume that there
 		is an infinite supply of top-tier talent that's university-trained and instantly available for
@@ -16,7 +20,7 @@
 		experience. It contains my efforts to make sense of the tech talent shortage. Both for others
 		and for myself.
 	</p>
-	<h1 class="text-3xl font-bold">Quick links.</h1>
+	<H1>Quick links.</H1>
 	<ul class="list-disc pl-4">
 		<li>
 			<a href="/articles" class="link">Articles</a>

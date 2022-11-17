@@ -1,5 +1,9 @@
+<script>
+	import H1 from 'src/typography/H1.svelte';
+</script>
+
 <div class="flex flex-col gap-6">
-	<h1 class="text-3xl font-bold">About me.</h1>
+	<H1>About me.</H1>
 	<p>
 		My name is Monarch Wadia. I live in Toronto with my wife and my laptop. I'm a full-stack
 		developer with 10+ years of experience. 5 of those years were spent building my own software
@@ -15,7 +19,7 @@
 		talent sourcing strategy; internal business needs; and marketing.
 	</p>
 
-	<h1 class="text-3xl font-bold">Some fun projects that I've worked on.</h1>
+	<H1>Some fun projects that I've worked on.</H1>
 	<ul class="list-disc pl-4">
 		<li>
 			Countless full-stack web apps, mobile apps, CLI tools, CI/CD pipelines, gigabyte-scale ETL and
@@ -32,7 +36,7 @@
 		</li>
 	</ul>
 
-	<h1 class="text-3xl font-bold">Getting in touch.</h1>
+	<H1>Getting in touch.</H1>
 	<p>
 		I'm easily reachable at <a
 			href="https://linkedin.com/in/monarchwadia"

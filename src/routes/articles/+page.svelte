@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Markdown } from 'src/services/MarkdownService';
+	import H1 from 'src/typography/H1.svelte';
 	import type { PageData } from './$types';
 
 	export let data: PageData;
@@ -16,7 +17,7 @@
 </script>
 
 <div class="flex flex-col gap-6">
-	<h1 class="text-3xl font-bold">Articles</h1>
+	<H1>Articles</H1>
 	<div>
 		<p>A growing repository of articles on a variety of topics, organized by category.</p>
 		{#each Object.entries(categorized) as [key, markdowns]}

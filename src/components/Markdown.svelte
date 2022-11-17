@@ -1,4 +1,6 @@
 <script lang="ts">
+	import H1 from 'src/typography/H1.svelte';
+
 	export let title: string;
 	export let url: string | undefined = undefined;
 	export let content: string;
@@ -23,13 +25,13 @@
 </script>
 
 <div class="flex flex-col gap-4">
-	<h1 class="text-3xl font-bold">
+	<H1>
 		{#if url}
 			<a class="link" href={url}>{title}</a>
 		{:else}
 			{title}
 		{/if}
-	</h1>
+	</H1>
 	<div class={proseCss}>
 		{@html content}
 	</div>

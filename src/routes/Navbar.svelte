@@ -2,6 +2,7 @@
 	const links = [
 		{ href: '/articles', label: 'Articles' },
 		{ href: '/case-studies', label: 'Case Studies' },
+		{ href: '/coding-gym', label: 'Coding Gym' },
 		{ href: '/about', label: 'About' }
 	];
 </script>
@@ -16,7 +17,7 @@
 			<p class="text-xs">people + programming</p>
 		</a>
 	</div>
-	<div class="flex-none hidden sm:block">
+	<div class="flex-none hidden md:block">
 		<ul class="menu menu-horizontal p-0">
 			{#each links as link}
 				<li>
@@ -25,7 +26,7 @@
 			{/each}
 		</ul>
 	</div>
-	<div class="flex-none sm:hidden dropdown">
+	<div class="flex-none md:hidden dropdown">
 		<label tabindex="0" class="btn btn-ghost btn-circle">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
